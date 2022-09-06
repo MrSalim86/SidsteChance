@@ -16,7 +16,7 @@ public class Main
 
         Liste liste = new Liste();
 
-        liste.printFromHead(n);
+        liste.printFromHead();
 
 
     }
