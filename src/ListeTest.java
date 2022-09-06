@@ -1,7 +1,12 @@
-public class Main
-{
-    public static void main(String[] args) {
+import static org.junit.jupiter.api.Assertions.*;
 
+class ListeTest
+{
+    Liste liste = new Liste();
+
+    @org.junit.jupiter.api.Test
+    void printFromHead()
+    {
         Node node1 = new Node("hej");
         Node node2 = new Node("med");
         Node node3 = new Node("dig");
@@ -12,13 +17,10 @@ public class Main
         node3.previous = node2;
         node2.previous = node1;
 
-        Node n = node1;
+        assertEquals("hej med dig", liste.printFromHead(node1));
 
-        Liste liste = new Liste();
 
-        liste.printFromHead(n);
 
 
     }
-
 }
